@@ -21,8 +21,8 @@ submitButton.addEventListener('click', () => {
   fetch(endpoint)
     .then((response) => response.json())
     .then((json) => {
-      //   minionTranslate.innerHTML = json.contents.translated
+      minionTranslate.innerHTML = json.contents.translated
       console.log(json)
     })
-    .catch((err) => console.log(err))
+    .catch((err) => handelError(err))
 })
